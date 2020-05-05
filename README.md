@@ -1,2 +1,4 @@
 # api-passport-jwt
-Ví dụ sử dụng ex.press để xây dựng REST API và chứng thực bằng passport-jwt.
+Building REST API with Express and authenticate by Passport with express-jwt strategy.
+
+You can now access to `/cat/public` api. 
