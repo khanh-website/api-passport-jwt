@@ -1,2 +1,5 @@
 <h1>{{title}}</h1>
 <p>Navigate to <a href="/cat/public">/cat/public</a> to access our public cat.</p>
+<p>To login and get JWT token:</p>
+<p><code>curl --location --request POST '{{fullUrl}}user/login' --header 'Content-Type:
+  application/json' --data-raw '{"username": "catlover", "password": "cat"}'</code></p>
