@@ -6,6 +6,8 @@ const logger = require('morgan');
 
 const homePage = require('./pages/home');
 const catApi = require('./api/cat');
+const userApi = require('./api/user');
+const passport = require('./services/passport');
 
 const app = express();
 
@@ -19,8 +21,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(passport.initialize());
+
 app.use('/', homePage);
 app.use('/cat', catApi);
+app.use('/user', userApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
