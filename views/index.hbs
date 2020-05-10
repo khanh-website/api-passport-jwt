@@ -3,3 +3,6 @@
 <p>To login and get JWT token:</p>
 <p><code>curl --location --request POST '{{fullUrl}}user/login' --header 'Content-Type:
   application/json' --data-raw '{"username": "catlover", "password": "cat"}'</code></p>
+<p>To call secured api:</p>
+<p><code>curl --location --request GET '{{fullUrl}}cat/private'
+  --header 'Authorization: Bearer &lt;jwt-token-from-login-api&gt;'</code></p>
